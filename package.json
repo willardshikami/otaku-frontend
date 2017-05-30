@@ -1,0 +1,15 @@
+{
+  "name": "taskmgr",
+  "version": "1.0.0",
+  "description": "A Anime List Application",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Rodgers M Gitau 'Valdadyne' ",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-vue": "^3.12.1"
+  }
+}
