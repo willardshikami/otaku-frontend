@@ -1,7 +1,13 @@
-var path = require('path')
-var express = require('express')
-var expressVue = require('express-vue')
-var app = express();
+const path = require('path');
+const express = require('express');
+const expressVue = require('express-vue');
+const bodyParser = require('body-parser');
+const passport = require('passport');
+const cors = require('cors')
+const mongoose = require('mongoose');
+const app = express();
+
+const users = require('./routes/users');
 
 app.engine('vue', expressVue);
 app.set('view engine', 'vue');
@@ -10,12 +16,22 @@ app.set('vue', {
     componentsDir: path.join(__dirname, '/views/components'),
     defaultLayout: 'layout'
 });
-app.get('/', function(req, res){
+
+//Cors Middleware to make request to API on different domains
+app.use(cors());
+
+//Body parser middleware
+app.use(bodyParser.json());
+
+
+//
+app.use('/users', users);
+
+//Route to homepage
+app.get('/', function (req, res) {
     var scope = {
-        data: {
-        },
-        vue: {
-                    }
+        data: {},
+        vue: {}
     };
     res.render('index', scope);
 });
