@@ -1,15 +1,23 @@
 {
-  "name": "taskmgr",
+  "name": "animelist",
   "version": "1.0.0",
-  "description": "A Anime List Application",
-  "main": "index.js",
+  "description": "An Anime List Application",
+  "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
   },
-  "author": "Rodgers M Gitau 'Valdadyne' ",
+  "author": "Rodgers M Gitau 'Valdadyne', Willard Shikami",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.15.3",
-    "express-vue": "^3.12.1"
+    "express": "*",
+    "express-vue": "*",
+    "body-parser": "*",
+    "mongoose": "*",
+    "cors": "*",
+    "bcryptjs": "*",
+    "jsonwebtoken": "*",
+    "passport": "*",
+    "passport-jwt": "*"
   }
 }
