@@ -10,13 +10,12 @@
   "author": "Rodgers M Gitau 'Valdadyne', Willard Shikami",
   "license": "ISC",
   "dependencies": {
-    "express": "*",
-    "express-vue": "*",
-    "body-parser": "*",
-    "mongoose": "*",
-    "cors": "*",
     "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
     "jsonwebtoken": "*",
+    "mongoose": "*",
     "passport": "*",
     "passport-jwt": "*"
   }
