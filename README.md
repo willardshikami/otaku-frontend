@@ -1,2 +1,2 @@
 # AnimeList
-Explore and save your Anime Lists.
+Explore and save your list of Favorite anime for later binge.
