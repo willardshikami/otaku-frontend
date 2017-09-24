@@ -1,5 +1,7 @@
 import React from 'react';
 import { Form, Button } from 'semantic-ui-react';
+import Validator from 'validator';
+import InlineError from '../messages/InlineError';
 
 class LoginForm extends React.Component {
   state = {
@@ -16,12 +18,25 @@ class LoginForm extends React.Component {
       data: {...this.state.data, [e.target.name]: e.target.value}
     }); 
 
+  onSubmit = () => {
+    const errors = this.validate(this.state.data);
+    this.setState({ errors });
+  };
+  
+  validate = data => {
+    const errors = {};
+    if(!Validator.isEmail(data.email)) errors.email = "invalid email";
+    if(!data.password) errors.password = "Please Type in your Password";
+    return errors;
+  };
+
   render() {      
-    const { data } = this.state;
+    const { data, errors } = this.state;
     
+
     return (
-      <Form>
-        {/* email input */}
+      <Form onSubmit={this.onSubmit}>
+        
         <Form.Field>
           <label htmlFor="email">email</label>
           <input 
@@ -31,10 +46,11 @@ class LoginForm extends React.Component {
             placeholder="johndoe@example.com" 
             value={data.email}
             onChange={this.onChange}
-            />
+          />
+          {errors.email && <InlineError text={errors.email}/>}
         </Form.Field>
 
-        {/* email input */}
+        
         <Form.Field>
           <label htmlFor="password">password</label>
           <input 
@@ -44,11 +60,12 @@ class LoginForm extends React.Component {
             placeholder="Type in your password" 
             value={data.password}
             onChange={this.onChange}
-            />
+          />
+          {errors.password && <InlineError text={errors.password}/>}
         </Form.Field>
 
-        {/* submit button */}
-        <Button>Login</Button>
+        
+        <Button primary>Login</Button>
       </Form>
     );
   }
