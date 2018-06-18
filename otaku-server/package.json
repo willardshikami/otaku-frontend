@@ -1,12 +1,12 @@
 {
-  "name": "animelist-server",
+  "name": "otaku-server",
   "version": "1.0.0",
-  "description": "Browse through collections on Anime and save them for later.",
+  "description": "An all inclusive Anime Fans Community.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Willard Shikami",
+  "author": "Willard Shikami & ",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
