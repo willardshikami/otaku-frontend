@@ -1,7 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const router = express.Router();
-const User = require('../models/user');
+
+//MODELS
+const User = require('../models/users');
+const Event = require('../models/events');
 
 router.get('/', (req, res) => {
   res.send('API');
@@ -49,6 +52,20 @@ router.post('/login', (req, res) => {
     }else
       res.status(200).send(user);
   })
+});
+
+
+//add events
+router.post('/events', (req, res) => {
+  let eventData = req.body;
+  let event = new Event(eventData);
+
+  event.save((error, event) => {
+    if(error){
+      console.log(error)
+    }else
+    res.status(200).send(event);
+  });
 });
 
 module.exports = router;
