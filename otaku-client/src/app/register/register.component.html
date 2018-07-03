@@ -1,28 +1,30 @@
-<div class="row pt-5">
-  <div class="col-md-6 mx-auto">
-    <div class="card">
-      <div class="header">
-        <h4>Otaku</h4>
-        <h5>Create Your Account</h5>
-      </div>
+<div class="container">
+  <div class="row p-5">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        <div class="header">
+          <h4>Otaku</h4>
+          <h5>Create Your Account</h5>
+        </div>
 
-      <div class="body">
-        <form class="form">
-          <div class="form-group">
-            <label for="">Username*</label>
-            <input [(ngModel)]="registerUserData.username" name="username" type="text" class="form-control rounded-0" required>  
-          </div>
-          <div class="form-group">
-            <label for="">Email*</label>
-            <input [(ngModel)]="registerUserData.email" name="email" type="email" class="form-control rounded-0" required>  
-          </div>
-          <div class="form-group">
-            <label for="">Password*</label>
-            <input [(ngModel)]="registerUserData.password" name="password" type="password" class="form-control rounded-0" required>  
-          </div>
-        </form>
+        <div class="body">
+          <form class="form">
+            <div class="form-group">
+              <label for="">Username*</label>
+              <input [(ngModel)]="registerUserData.username" name="username" type="text" class="form-control rounded-0" required>
+            </div>
+            <div class="form-group">
+              <label for="">Email*</label>
+              <input [(ngModel)]="registerUserData.email" name="email" type="email" class="form-control rounded-0" required>
+            </div>
+            <div class="form-group">
+              <label for="">Password*</label>
+              <input [(ngModel)]="registerUserData.password" name="password" type="password" class="form-control rounded-0" required>
+            </div>
+          </form>
 
-        <button (click)="submitUser()" class="btn btn-primary float-right">Register</button>
+          <button (click)="submitUser()" class="btn btn-primary float-right rounded-0">Register</button>
+        </div>
       </div>
     </div>
   </div>
