@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-explore',
+  selector: 'explore',
   templateUrl: './explore.component.html',
   styleUrls: ['./explore.component.css']
 })
