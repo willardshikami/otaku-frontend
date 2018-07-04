@@ -1,4 +1,5 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const router = express.Router();
 
@@ -11,7 +12,7 @@ router.get('/', (req, res) => {
 });
 
 //mongoose setup
-const db = 'mongodb://shikami:shikami1@ds125211.mlab.com:25211/otaku-db';
+const db = 'mongodb://otaku:otaku1@ds227481.mlab.com:27481/otaku-db';
 mongoose.connect(db, err => {
   if(err){
     console.error('Error', err)
@@ -30,7 +31,9 @@ router.post('/register', (req, res) => {
     if(error){
       console.log(error);
     }else{
-      res.status(200).send(registeredUser);
+      let payload = { subject: registeredUser._id }
+      let token = jwt.sign(payload, 'secretKey')
+      res.status(200).send({token});
     }
   });
 });
@@ -49,8 +52,10 @@ router.post('/login', (req, res) => {
     }else
     if(user.password !== userData.password){
       res.status(401).send('Invalid Password');
-    }else
-      res.status(200).send(user);
+    }
+      let payload = { subject: user._id }
+      let token = jwt.sign(payload, 'secretKey')
+      res.status(200).send({payload});
   })
 });
 
