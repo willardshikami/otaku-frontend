@@ -12,9 +12,6 @@ const eventSchema = new Schema({
     default: Date.now 
   },
   contact: String,
-  hashtag: {
-    type:  []
-  },
   location: String,
   linkToRegister: String,
   postedBy: String
