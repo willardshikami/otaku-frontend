@@ -1,0 +1,50 @@
+
+/*
+  ===============================================
+  SEARCH INPUT
+  ===============================================
+*/
+.event-header{
+  background-image: url(../../assets/events-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.events{
+  background-color: #F2F2F2;
+  margin: 0;
+  padding: 0;
+}
+
+.jumbotron{
+  background-color: rgba(0, 0, 0, 0.0) !important;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.jumbotron h1{
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #111517;
+}
+
+.search-box{
+  color: #111517 !important;
+  border: 1px solid #f2f2f2;
+  font-family: 'Averta', sans-serif;
+  width: 50%;
+  height: 50px;
+  font-size: 18px;
+  padding-left: 1em;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.12), 0 5px 10px rgba(0,0,0,0.24);
+}
+
+/*
+  ===============================================
+  CARDS
+  ===============================================
+*/
+
+.card{
+  padding: 30px;
+}

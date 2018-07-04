@@ -1,3 +1,33 @@
-<p>
-  events works!
-</p>
+<div class="events">
+  <div class="event-header">
+    <div class="jumbotron">
+      <h1>Find your next experience</h1>
+      <div class="form-group">
+        <input class="search-box" type="text" placeholder="Search Events...">
+      </div>
+    </div>
+  </div>
+
+  <div class="event-body">
+    <div class="container">
+      <div class="event-body-title text-center">
+        <h2>Events for you</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <!--*ngFor="let event of eventsData"-->
+          <div class="card">
+            <div class="event-card-body">
+              <h5>Title</h5>
+              <h6>description</h6>
+            </div>
+            <div class="event-card-footer text-muted">
+              <p>date</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
