@@ -24,6 +24,7 @@ cache:
     - node_modules
 
 script:
+  - npm install codecov -g
   - ng lint
   - ng test --watch=false
   - ng build --prod --aot false
