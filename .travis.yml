@@ -10,10 +10,10 @@ addons:
   chrome: stable
 
 before_script:
-  - npm global install @angular/cli
+  - yarn global add @angular/cli
 
 before_install:
-  - npm install --user codecov
+  - pip install --user codecov
 
 after_success:
   - codecov --file coverage/lcov.info --disable search
