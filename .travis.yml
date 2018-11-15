@@ -26,8 +26,8 @@ cache:
 script:
   - npm install codecov -g
   - ng lint
-  - ng test --watch=false
-  - ng build --prod 
+  - ng test 
+  - ng build 
   
 deploy:
   provider: pages
