@@ -22,8 +22,8 @@ export class RegisterComponent implements OnInit {
   submitUser() {
     this._auth.registerUser(this.registerUserData)
       .subscribe(
-        res => console.log(res),
-        error => console.log(error)
+        res => res,
+        error => error
       );
   }
 
