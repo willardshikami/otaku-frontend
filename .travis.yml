@@ -24,11 +24,11 @@ cache:
     - node_modules
 
 script:
+  - npm install codecov -g
   - ng lint
   - ng test --watch=false
-  - ng build --prod
-
-
+  - ng build --prod 
+  
 deploy:
   provider: pages
   skip-cleanup: true

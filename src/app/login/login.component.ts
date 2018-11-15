@@ -1,27 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from "../auth.service";
+import { AuthService } from '../auth.service';
 
 @Component({
-  selector: 'login',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  loginUserData = {}
+  loginUserData = {};
 
-  //inject auth service 
-  constructor(private _auth : AuthService) { }
+  // inject auth service
+  constructor(private _auth: AuthService) { }
 
   ngOnInit() {
   }
 
-  loginUser(){
+  loginUser() {
     this._auth.loginUser(this.loginUserData)
     .subscribe(
       res => console.log(res),
       error => console.log(error)
-    )
+    );
   }
 
 }
