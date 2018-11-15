@@ -14,6 +14,7 @@ before_script:
 
 before_install:
   - pip install --user codecov
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 after_success:
   - codecov --file coverage/lcov.info --disable search
@@ -26,7 +27,7 @@ cache:
 script:
   - npm install codecov -g
   - ng lint
-  - ng test --watch false -cc
+  - ng test --watch=false 
   - ng build --prod
   
 deploy:
