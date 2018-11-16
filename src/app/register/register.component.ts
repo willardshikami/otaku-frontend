@@ -9,7 +9,7 @@ import { AuthService } from '../auth.service';
 export class RegisterComponent implements OnInit {
 
   // empty object that takes in user data from the UI
-  registerUserData = [];
+  registerUserData: any = {};
 
   // inject authentication service
   constructor(private _auth: AuthService) {}
