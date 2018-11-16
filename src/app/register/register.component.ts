@@ -9,10 +9,10 @@ import { AuthService } from '../auth.service';
 export class RegisterComponent implements OnInit {
 
   // empty object that takes in user data from the UI
-  registerUserData = {};
+  registerUserData = [];
 
   // inject authentication service
-  constructor(private _auth: AuthService) { }
+  constructor(private _auth: AuthService) {}
 
   ngOnInit() {
   }
