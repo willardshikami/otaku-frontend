@@ -31,7 +31,7 @@ script:
   - codecov 
   - ng build --prod
   
-deploy:
+deploy: 
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
